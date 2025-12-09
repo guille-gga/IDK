@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<div id="elements">
+
+</div>
+    
+</body>
+
+<script>
+
+lst=[{
+    name: "Guille",
+    age:18
+},{
+    name: "Ana",
+    age:22
+}];
+
+localStorage.setItem("list", JSON.stringify(lst));
+
+lst.forEach(element =>{
+    let elements = document.getElementById("elements");
+    let div = document.createElement("div");
+    div.innerHTML = element.name + " - " + element.age;
+    elements.appendChild(div);
+})
+
+
+
+</script>
+</html>
